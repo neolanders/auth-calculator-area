@@ -1,0 +1,64 @@
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 p-4 col-xs-12">
+        <h1 class="text-xs-center">{{ title }}</h1>
+        <p class="text-xs-center">
+          <a [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
+          <a [routerLink]="['/register']" *ngIf="authType == 'login'">Need an account?</a>
+        </p>
+        <myclc-list-errors [errors]="errors"></myclc-list-errors>
+        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+            <fieldset *ngIf="authForm.controls['username']"
+                      class="form-group has-feedback custom-feedback" 
+                      [ngClass]="{'has-danger': (!authForm.controls['username'].valid && authForm.controls['username'].touched),
+                                  'has-success': (authForm.controls['username'].valid && authForm.controls['username'].touched)}">
+              <input
+                formControlName="username"
+                placeholder="Username"
+                class="form-control form-control-lg"
+                type="text"
+                *ngIf="authType == 'register'" />
+                <div class="form-control-feedback"
+                    *ngIf="authForm.controls['username'].hasError('required') && ( authForm.controls['username'].touched || authForm.controls['username'].dirty )">
+                  Please fill username!!
+                </div>
+            </fieldset>
+            <fieldset class="form-group has-feedback custom-feedback" 
+                      [ngClass]="{'has-danger': (!authForm.controls['email'].valid && authForm.controls['email'].touched),
+                                  'has-success': (authForm.controls['email'].valid && authForm.controls['email'].touched)}">
+
+              <input
+                formControlName="email"
+                placeholder="Email"
+                class="form-control form-control-lg"
+                type="text" />
+                <div class="form-control-feedback"
+                     *ngIf="authForm.controls['email'].hasError('required') && ( authForm.controls['email'].touched || authForm.controls['email'].dirty )
+                            || authForm.get('email').hasError('pattern') && (authForm.get('email').touched || authForm.get('email').dirty)">
+                  Please enter your email with format xyz@exemple.com.
+                </div>
+            </fieldset>
+            <fieldset class="form-group has-feedback custom-feedback"
+                      [ngClass]="{'has-danger': (!authForm.controls['password'].valid && authForm.controls['password'].touched),
+                                  'has-success': (authForm.controls['password'].valid && authForm.controls['password'].touched)}">
+              <input
+                formControlName="password"
+                placeholder="Password"
+                class="form-control form-control-lg"
+                type="password" />
+                <div class="form-control-feedback"
+                    *ngIf="authForm.controls['password'].hasError('required') && ( authForm.controls['password'].touched || authForm.controls['password'].dirty )">
+                  Please fill password!!
+                </div>
+            </fieldset>
+            <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
+              {{ title }}
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

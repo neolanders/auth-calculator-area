@@ -1,0 +1,54 @@
+.calculator {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 282px;
+    padding: 12px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(270deg, #edecea, #ecebe9 19%, #ecebe9 53%, #d4d3d1 97%, #c1c0be);
+    background-image: linear-gradient(180deg, #edecea, #ecebe9 19%, #ecebe9 53%, #d4d3d1 97%, #c1c0be);
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, .44);
+    .output {
+        flex-direction: row;
+        .btn.top {
+            height: 40px;
+            width: auto;
+            float: right;
+            margin: 10px auto;
+        }
+        .details {
+            width: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: right;
+            padding-right: 10px;
+        }
+    }
+    .btn {
+        width: 40px;
+        height: 40px;
+        font-weight: bold;
+        margin: 3px;
+        border: 1px solid #cfcfcf;
+        border-radius: 5px;
+        background-image: -webkit-linear-gradient(270deg, #fdfdfd 1%, #f1f1f1 11%, #f1f1f1 83%, #e4e4e4);
+        background-image: linear-gradient(180deg, #fdfdfd 1%, #f1f1f1 11%, #f1f1f1 83%, #e4e4e4);
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+    }
+}

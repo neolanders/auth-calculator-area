@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "email": "test@mail.com",
+            "password": "12345",
+            "username": "test",
+            "id": 1,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1IiwiaWF0IjoxNTE3MzcxNTQ4LCJleHAiOjE1MTczNzUxNDh9.ui_j7wtPTsgAPrF2tnWhBxgIYDuJ3QzMMjikBPWHoVg"
+        },
+        {
+            "email": "test2@mail.com",
+            "password": "123454",
+            "username": "test",
+            "id": 2
+        },
+        {
+            "email": "test@mail.comn",
+            "password": "123454",
+            "username": "test",
+            "id": 3
+        },
+        {
+            "email": "user@fakemail.com",
+            "password": "pass",
+            "id": 4
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">MyCalculatorAPP</a>
+    <button class="navbar-toggler"
+            type="button" 
+            (click)="toggleCollapsed()"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': collapsed}">
+
+      <!-- Show this for logged out users -->
+      <ul *myclcShowAuthed="false"
+        class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/login"
+            routerLinkActive="active">
+            Sign in
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/register"
+            routerLinkActive="active">
+            Sign up
+          </a>
+        </li>
+      </ul>
+  
+      <!-- Show this for logged in users -->
+      <ul *myclcShowAuthed="true"
+        class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/"
+            routerLinkActive="active">
+            My Calculator
+          </a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link"
+            (click)="logout()">
+            Sign Out
+          </span>
+        </li>
+        <li class="nav-item">
+            <span class="nav-link user" *ngIf="currentUser$ | async; let user">Welcome {{ user.user.username }}</span>            
+        </li>
+      </ul>
+  </div>
+</nav>

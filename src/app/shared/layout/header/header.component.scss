@@ -1,0 +1,17 @@
+@import '../../../../assets/sass/my-calculator/variables';
+
+.navbar-dark {
+    background: $navbar-inverse-bg;
+    .navbar-nav {
+        .nav-item {
+            > span {
+                cursor: pointer;
+            }
+            > span.user {
+                cursor: default;
+                color: $white;
+            }
+        }
+    }
+}
+  

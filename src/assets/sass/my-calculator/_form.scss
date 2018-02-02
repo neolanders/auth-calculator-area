@@ -1,0 +1,55 @@
+@import 'variables';
+@import '~bootstrap/scss/variables';
+@import '~font-awesome/scss/variables';
+@import "~font-awesome/scss/mixins";
+
+
+input.ng-invalid.ng-touched {
+  background-color: #ffd3d3;
+  border: 1px solid $danger;
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 25px;
+  font-weight: normal !important;
+  em {
+    color: #000000;
+  }
+}
+.form-group.custom-feedback.has-feedback {
+  position:relative;
+  &:after {
+    @include fa-icon();
+    position:absolute;
+    right: 10px;
+    top: -15px;
+    margin-top: 32px;
+    z-index: 2;
+    font-size: 1.1rem;
+    color: grey;
+    content: $fa-var-circle;
+  }
+  &.has-danger {
+    &:after {
+      content: $fa-var-exclamation-circle;
+      color: $danger;
+    }
+  }
+  &.has-success {
+    &:after {
+      content: $fa-var-check-circle;
+      color: $success;
+    }
+  }
+}
+.form-control-feedback{
+  width: auto;
+  font-size: 12px;
+  text-align: left;
+  position: relative;
+  color: $danger;
+}
+.has-feedback label ~ .form-control-feedback {
+  top: 0px;
+}
