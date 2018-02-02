@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Errors, UserService } from '../shared';
+import { HeaderService } from '../shared/services/header.service';
 
 @Component({
   selector: 'myclc-auth',
@@ -18,7 +19,8 @@ export class AuthComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private userService: UserService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private headerService: HeaderService
   ) {
     // use FormBuilder to create a form group
     const emailRegex: RegExp = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/;
@@ -35,7 +37,9 @@ export class AuthComponent implements OnInit {
       this.authType = data[data.length - 1].path;
 
       // Set a title for the page accordingly
-      this.title = (this.authType === 'login') ? 'Sign in' : 'Sign up';
+      const title = (this.authType === 'login') ? 'Sign in' : 'Sign up';
+
+      this.headerService.setTitle(title);
 
       // add form control for username if this is the register page
       if (this.authType === 'register') {

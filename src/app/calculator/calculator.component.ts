@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CalculatorService } from './calculator.service';
 import { select, Store } from '@ngrx/store';
 import * as LogsActions from '../shared/store/logs/logs.actions';
@@ -6,19 +6,25 @@ import * as fromLogs from '../shared/store/logs/index';
 import { Log } from '../shared/models/logs.model';
 import { DatePipe } from '@angular/common';
 import { Observable } from 'rxjs/Observable';
+import { HeaderService } from '../shared/services/header.service';
 
 @Component({
     selector: 'myclc-calculator',
     templateUrl: './calculator.component.html',
     styleUrls: ['./calculator.component.scss']
 })
-export class CalculatorComponent {
+export class CalculatorComponent implements OnInit {
 
     public history: String = '';
     public result: String = '';
 
     constructor(private calcService: CalculatorService,
-                private store: Store<fromLogs.State>) {}
+                private store: Store<fromLogs.State>,
+                private headerService: HeaderService) {}
+
+    ngOnInit(): void {
+        this.headerService.setTitle('My Calculator');
+    }
 
     @HostListener('keydown', ['$event'])
     onKeyDown(event): void {

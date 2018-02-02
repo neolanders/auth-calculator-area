@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../shared';
+import { HeaderService } from '../shared/services/header.service';
 
 @Component({
   selector: 'myclc-home',
@@ -11,10 +12,12 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private headerService: HeaderService
   ) {}
 
   ngOnInit(): void {
+    this.headerService.setTitle('Home');
     this.userService.checkIsAuthenticated()
     .subscribe(
       authenticated => {

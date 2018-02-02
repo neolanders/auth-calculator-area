@@ -5,7 +5,7 @@
             "password": "12345",
             "username": "test",
             "id": 1,
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1IiwiaWF0IjoxNTE3MzcxNTQ4LCJleHAiOjE1MTczNzUxNDh9.ui_j7wtPTsgAPrF2tnWhBxgIYDuJ3QzMMjikBPWHoVg"
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1IiwiaWF0IjoxNTE3NTM4MzQ4LCJleHAiOjE1MTc1NDE5NDh9.CBEeojcAVWEhmryyBI0k2y2Xc5uU9NExBoI5ab3Rjes"
         },
         {
             "email": "test2@mail.com",
@@ -23,6 +23,12 @@
             "email": "user@fakemail.com",
             "password": "pass",
             "id": 4
+        },
+        {
+            "email": "test3@mail.com",
+            "password": "12345",
+            "username": "test",
+            "id": 5
         }
     ]
 }

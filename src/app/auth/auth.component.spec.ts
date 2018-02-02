@@ -11,6 +11,7 @@ import { environment } from '../../environments/environment';
 
 import {
   ApiService,
+  HeaderService,
   JwtService,
   SharedModule,
   UserService
@@ -44,7 +45,8 @@ describe('AuthComponent', () => {
       providers: [
         UserService,
         ApiService,
-        JwtService
+        JwtService,
+        HeaderService
       ]
     })
     .compileComponents();

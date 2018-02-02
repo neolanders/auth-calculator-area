@@ -1,13 +1,19 @@
-<div class="home-page">
-    <div class="d-flex h-100 p-3 mx-auto flex-column" *myclcShowAuthed="true">
-        <main role="main" class="inner cover">
-            <myclc-calculator></myclc-calculator><br/>
-            <myclc-operation-list></myclc-operation-list>
-        </main>
-    </div>
-    <div class="d-flex h-100 p-3 mx-auto flex-column" *myclcShowAuthed="false">
-      <main role="main" class="inner cover">
-        <p class="lead">To access My Calculator App you mnust logged In first Click <a [routerLink]="['/login']">here</a> to Signin</p>
-      </main>
+<h1>TEST</h1>
+<div class="home calculator">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 p-4 col-xs-12">
+            <!-- <h1 class="text-xs-center">{{ headerService.title | async}}</h1> -->
+            <div class="d-flex h-100 p-3 mx-auto flex-column" *myclcShowAuthed="true">
+                <main role="main" class="inner cover">
+                    <myclc-calculator></myclc-calculator><br/>
+                    <myclc-operation-list></myclc-operation-list>
+                </main>
+            </div>
+            <div class="d-flex h-100 p-3 mx-auto flex-column" *myclcShowAuthed="false">
+                <main role="main" class="inner cover">
+                    <p class="lead">To access My Calculator App you mnust logged In first Click <a [routerLink]="['/login']">here</a> to Signin</p>
+                </main>
+            </div>
+        </div>
     </div>
 </div>

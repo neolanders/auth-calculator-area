@@ -7,9 +7,9 @@ describe('my-calculator App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Home Title', () => {
     page.navigateTo();
-    expect(page.getParagraphText())
-      .toEqual('Welcome to app!');
+    expect(page.getPageTitle())
+      .toEqual([ '', 'TEST' ]);
   });
 });

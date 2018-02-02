@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 
 import {
   ApiService,
+  HeaderService,
   JwtService,
   SharedModule,
   UserService
@@ -32,7 +33,8 @@ describe('HomeComponent', () => {
       providers: [
         UserService,
         ApiService,
-        JwtService
+        JwtService,
+        HeaderService
       ]
     })
     .compileComponents();

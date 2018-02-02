@@ -1,11 +1,11 @@
-import { async, ComponentFixture, TestBed, getTestBed } from '@angular/core/testing';
+import { async, ComponentFixture, getTestBed, TestBed } from '@angular/core/testing';
 import { CalculatorComponent } from './calculator.component';
 import { StoreModule } from '@ngrx/store';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CalculatorService } from '../calculator/calculator.service';
 
 import {
-  SharedModule
+  SharedModule, HeaderService
 } from '../shared';
 
 import { metaReducers, reducers } from '../shared/store/meta.reducers';
@@ -25,7 +25,8 @@ describe('CalculatorComponent', () => {
         RouterTestingModule
       ],
       providers: [
-        CalculatorService
+        CalculatorService,
+        HeaderService
       ]
     })
     .compileComponents();

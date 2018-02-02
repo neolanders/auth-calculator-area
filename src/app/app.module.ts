@@ -11,6 +11,7 @@ import {
   AuthGuard,
   FooterComponent,
   HeaderComponent,
+  HeaderService,
   JwtService,
   SharedModule,
   UserService
@@ -21,7 +22,7 @@ import { metaReducers, reducers } from './shared/store/meta.reducers';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: false });
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     ApiService,
     AuthGuard,
     JwtService,
-    UserService
+    UserService,
+    HeaderService
   ],
   bootstrap: [AppComponent]
 })
