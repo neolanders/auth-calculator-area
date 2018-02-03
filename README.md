@@ -35,13 +35,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 npm run start-auth
 
 
-### Deploy APP IN 
+### Deploy APP IN AMAZON (EC2 instance)
 - 1) REPLACE SERVER_NAME in buildspec.yml
 - 2) SETUP YOUR AMAZON INSTANCE: [SAMPLE INSTRUCTIONS FOR ANGULAR APP USING ANGULAR CLI USING AWS suite](https://www.linkedin.com/pulse/create-angular-app-using-deploy-aws-suite-andr%C3%A9s-casta%C3%B1o/)
 
 
-
-### Packages I used in this project
+### Other packages I used in this project
 - [@ngrx/store-devtools](https://github.com/ngrx/store-devtools) instruments your store letting you use a
 [powerful time-travelling debugger](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).
 - [ngrx-store-localstorage](https://github.com/ngrx/router-store) simple syncing between ngrx store and local storage used to persist the state of the apllication 
