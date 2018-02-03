@@ -48,12 +48,9 @@ export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionRedu
  */
 import { storeFreeze } from 'ngrx-store-freeze';
 
-// console.log all actions
+// Debug all actions and reducers
 export function logger(reducer: ActionReducer<AppState>): ActionReducer<AppState> {
     return (state: AppState, action: any): AppState => {
-        console.log('state', state);
-        console.log('action', action);
-
         return reducer(state, action);
     };
 }

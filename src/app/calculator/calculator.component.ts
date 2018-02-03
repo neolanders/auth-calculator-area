@@ -48,8 +48,6 @@ export class CalculatorComponent implements OnInit {
     onAnswer(): void {
         if (this.history.match(/\d+$/)) { // match only valid numeric operation
             const equation = this.calcService.standardizeString(this.history);
-
-            console.log('__equation', equation);
             this.calcService.evaluate(equation)
                 .then(result => {
                     this.result = result;
