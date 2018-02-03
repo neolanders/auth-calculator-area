@@ -28,7 +28,6 @@
             <fieldset class="form-group has-feedback custom-feedback" 
                       [ngClass]="{'has-danger': (!authForm.controls['email'].valid && authForm.controls['email'].touched),
                                   'has-success': (authForm.controls['email'].valid && authForm.controls['email'].touched)}">
-
               <input
                 formControlName="email"
                 placeholder="Email"

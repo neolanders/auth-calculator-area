@@ -36,8 +36,8 @@ npm run start-auth
 
 
 ### Deploy APP IN 
-1) REPLACE SERVER_NAME in buildspec.yml
-2) SETUP YOUR AMAZON INSTANCE: [INSTRUCTIONS](https://www.linkedin.com/pulse/create-angular-app-using-deploy-aws-suite-andr%C3%A9s-casta%C3%B1o/)
+- 1) REPLACE SERVER_NAME in buildspec.yml
+- 2) SETUP YOUR AMAZON INSTANCE: [SAMPLE INSTRUCTIONS FOR ANGULAR APP USING ANGULAR CLI USING AWS suite](https://www.linkedin.com/pulse/create-angular-app-using-deploy-aws-suite-andr%C3%A9s-casta%C3%B1o/)
 
 
 

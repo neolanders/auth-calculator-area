@@ -6,6 +6,9 @@ import { JwtService } from './jwt.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { environment } from '../../../environments/environment';
 import { User } from '../index';
+import * as fromUser from '../store/user/user.reducers';
+import * as sinon from 'sinon';
+import { Store } from '@ngrx/store';
 
 xdescribe('UserService', () => {
   const httpMock: HttpTestingController = undefined;
@@ -52,9 +55,27 @@ xdescribe('UserService', () => {
               .toEqual(dummyUsers);
       });
 
-      const req = httpMock.expectOne(`${environment.api_url}/users.login`);
+      const req = httpMock.expectOne(`${environment.api_url}/users/login`);
       expect(req.request.method)
         .toBe('POST');
+      req.flush(dummyUsers);
+    });
+  }));
+
+  describe('#populate', inject([UserService], (service: UserService) => {
+    it('If JWT in localstorage should load user\'s info.', () => {
+      const dummyUsers: User = {
+            email: 'test2@mail.com',
+            token: '123454',
+            username: 'test'
+      };
+      const spy = sinon.spy(window.localStorage, 'setItem');
+      spy.calledWith('jwtToken', 'we23frfefew2121'); // fake JWT Token
+      service.populate();
+
+      const req = httpMock.expectOne(`${environment.api_url}/users`);
+      expect(req.request.method)
+        .toBe('GET');
       req.flush(dummyUsers);
     });
   }));

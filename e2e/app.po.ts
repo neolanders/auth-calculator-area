@@ -7,7 +7,7 @@ export class AppPage {
   }
 
   getPageTitle(): any {
-    return element.all(by.tagName('h1'))
+    return element(by.css('h1'))
       .getText();
   }
 }

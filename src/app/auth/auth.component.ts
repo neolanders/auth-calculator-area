@@ -20,7 +20,7 @@ export class AuthComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private fb: FormBuilder,
-    private headerService: HeaderService
+    public headerService: HeaderService
   ) {
     // use FormBuilder to create a form group
     const emailRegex: RegExp = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/;
