@@ -35,7 +35,14 @@
             "email": "test222@mail.com",
             "password": "12345",
             "username": "evgeny",
-            "id": 6
+            "id": 6,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyMjJAbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1IiwiaWF0IjoxNTE4MjA2ODk3LCJleHAiOjE1MTgyMTA0OTd9.EuN5crqYstv77uUZqIjBe3_eSHTOR0F5lazRcZBIl94"
+        },
+        {
+            "email": "test333@mail.com",
+            "password": "1234",
+            "username": "test333",
+            "id": 7
         }
     ]
 }
