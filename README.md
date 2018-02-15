@@ -1,5 +1,11 @@
 # MyCalculator
 
+This project was made get a complete end2end application with unitest and user simple authentification to access a protected area. To simulate the API, I'm using a mock-server with JWT Token.
+
+# Screens Shot:
+
+![Alt text](/screenshots/screen.png?raw=true "Add View")
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Development server
@@ -18,7 +24,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Check Unitest ceverage
+## Check Unitest ceverage
+
+Most of the unitest have been covered for this application.
+In order to see the coverage run the following command:
 
 ng test --watch=false --code-coverage
 
@@ -32,6 +41,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ### Start Mock Server
+This project include a mock-server to deal with the user API and handle JWT token authentification.
+
+- To run the server:
+
+cd mock-server
 npm run start-auth
 
 
