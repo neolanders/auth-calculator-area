@@ -2,9 +2,29 @@
 
 This project was made get a complete end2end application with unitest and user simple authentification to access a protected area. To simulate the API, I'm using a mock-server with JWT Token.
 
-# Screens Shot:
+# Functional   Requirements:
+- Users   must   be   able   to   create   an   account.   It   must   contain   a   username,   email   and
+password
+- Once   logged   in   user   is   given   access   to   calculator
+- Calculator   must   have   a   textarea   display,   and   use   buttons   for   the   numbers   and   modifiers.
+- Calculator   must   support   decimal   places   up   to   8   decimals.
+- Calculator   must   support   multiplication,   division,   addition,   subtraction,      backspace   and
+enter.
+- A   user   must   be   able   to   view   a   log   of   all   previous   calculations
+
+## Screens Shot:
 
 ![Alt text](/screenshots/screen.png?raw=true "Add View")
+
+
+## Installation 
+
+npm install
+
+Install dependancies for mock-server:
+
+cd mock-server
+npm install
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
@@ -47,7 +67,6 @@ This project include a mock-server to deal with the user API and handle JWT toke
 
 cd mock-server
 npm run start-auth
-
 
 ### Deploy APP IN AMAZON (EC2 instance)
 - 1) REPLACE SERVER_NAME in buildspec.yml
