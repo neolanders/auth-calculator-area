@@ -1,6 +1,6 @@
 # MyCalculator
 
-This project was made get a complete end2end application with unitest and user simple authentification to access a protected area. To simulate the API, I'm using a mock-server with JWT Token.
+This project was made to get a complete end2end application with unitest including user creation and authentification to access a protected area. To simulate the API, I'm using a mock-server with JWT Token.
 
 # Functional   Requirements:
 - Users   must   be   able   to   create   an   account.   It   must   contain   a   username,   email   and
