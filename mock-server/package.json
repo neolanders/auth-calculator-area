@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "jsonwebtoken": "^8.1.1",
+    "jsonwebtoken": "^9.0.0",
     "ngrx-store-localstorage": "^0.3.0"
   },
   "devDependencies": {
